@@ -2,7 +2,9 @@ services:
   mysql.host:
     ports:
       - $SQL_HOST_PORT:3306
-    image: "mysql:8.0.22"
+    build:
+      context: .
+      dockerfile: Dockerfile
     platform: linux/amd64
     restart: always
     environment:
