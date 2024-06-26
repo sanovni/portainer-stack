@@ -13,5 +13,3 @@ services:
       MYSQL_ROOT_PASSWORD: $SQL_ROOT_PASS
       MYSQL_DATABASE: $SQL_DB
     command: "mysqld --default-authentication-plugin=mysql_native_password"
-    volumes:
-      - .:/docker-entrypoint-initdb.d
